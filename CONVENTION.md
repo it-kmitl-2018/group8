@@ -2,7 +2,7 @@
 
 ภาษาที่จะใช้ : Kotlin
 
-ชื่อตัวแปร : testOnClick (Camel back)
+ชื่อตัวแปร : testOnClick (Lower Camel Case)
 
 การเว้นบรรทัด : 
 Import จะเว้นทีละบรรทัด ไม่มีบรรทัดว่าง
