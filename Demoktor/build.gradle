@@ -1,6 +1,6 @@
 // build.gradle
 
-group 'com.group8.kotlinserver'
+group 'th.ac.kmitl.it.soa.group8'
 version '1.0-SNAPSHOT'
 
 buildscript {
