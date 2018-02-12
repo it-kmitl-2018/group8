@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>eInvoice By ETDA</title>
+  </head>
+  <body>
+    <div id="app">
+      <form>
+        <h3>ใบแจ้งหนี้และใบรับอิเล็กทรอนิกส์</h3>
+        <!-- :SellerCITradeParty -->
+        รหัสผู้ค้า (ผู้ขาย): <input type="text" name="IDSeller" v-model="IDSeller"><br>
+        รหัสผู้ค้าสากล (ผู้ขาย): <input type="text" name="GlobalID"><br>
+        ชื่อผู้ขาย: <input type="text" name="Name" v-model="Name"><br>
+        <!-- :SpecifiedCILegalOrganization -->
+        เลขที่ประจำตัวผู้เสียภาษีอากร (ผู้ขาย): <input type="text" name="ID"><br>
+        <!-- :DefineCITradeContact -->
+        <!-- :EmailURICIUniversalCommunication -->
+        URI (ผู้ขาย): <input type="text" name="URIID"><br>
+        อีเมล (ผู้ขาย): <input type="text" name="CompleteNumber"><br>
+        รหัสไปรษณีย์ (ผู้ขาย): <input type="text" name="PostalCode"><br>
+        ชื่ออาคาร (ผู้ขาย): <input type="text" name="BuildingName"><br>
+        ที่อยู่บรรทัดที่ 1 (ผู้ขาย): <input type="text" name="LineOne"><br>
+        ที่อยู่บรรทัดที่ 2 (ผู้ขาย): <input type="text" name="LineTwo"><br>
+        ซอย (ผู้ขาย): <input type="text" name="LineThree"><br>
+        หมู่บ้าน (ผู้ขาย): <input type="text" name="LineFour"><br>
+        หมู่ที่ (ผู้ขาย): <input type="text" name="LineFive"><br>
+        ถนน (ผู้ขาย): <input type="text" name="StreetName"><br>
+        รหัสอำเภอ (ผู้ขาย): <input type="text" name="CityName"><br>
+        รหัสตำบล (ผู้ขาย): <input type="text" name="CitySubDivisionName"><br>
+        รหัสประเทศ (ผู้ขาย): <input type="text" name="CountryID"><br>
+        รหัสจังหวัด (ผู้ขาย): <input type="text" name="CountrySubDivisionID"><br>
+        บ้านเลขที่ (ผู้ขาย): <input type="text" name="CountrySubDivisionID"><br><br>
+      </form>
+      <button v-on:click="show">Show</button>
+      <h3> แสดงผลค่าที่กรอกด้วย Vue.js </h3>
+      <p> รหัสผู้ค้า (ผู้ขาย): {{ IDSeller }}</p>
+      <p> ชื่อผู้ขาย: {{ Name }}</p>
+    </div>
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+var eInvoice = new Vue({
+  el: '#app',
+  data: {
+    IDSeller: '',
+    Name: ''
+  },
+  methods: {
+    show: function(event) {
+      if (event) {
+        alert(this.IDSeller + '\n' +this.Name)
+      }
+    }
+  }
+})
+</script>
