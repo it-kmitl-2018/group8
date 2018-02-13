@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service
 
 @Service
 class Group8Service {
-    fun getHello() = "Hello Service"
+    fun getHello() = "Hello Service1"
 }
