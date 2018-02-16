@@ -26,13 +26,12 @@
 	* มี White space ทุกครั้งหลังตามด้วย Comma หรือ Semi-Colon(กรณี For) เช่น fucntion(a, b, c), for(a = 5; a < 0; a --)
 	* มี White space ระหว่าง operator ขณะกำหนดค่าตัวแปร เช่น int x = 9; a + b = 100;
 	* ไม่มี White space ก่อนจบการใช้งานด้วย Semi Colon เช่น writeThis; areYou;
-มี White space ก่อนขึ้นปีกกา เช่น Class A { }
 
 * การกำหนด Indent : เคาะ 4 Space
 
-* การกำหนดปีกกาของ if / function / class : ใช้ปีกกาแรกติดกับบรรทัดเงื่อนไขหรือการสร้าง เช่น 
+* การกำหนดปีกกาของ if / function / class : มี White space ก่อนขึ้นปีกกา เช่น 
 
-class A{
+class A {
 
 }
 
