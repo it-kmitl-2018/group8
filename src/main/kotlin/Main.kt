@@ -10,33 +10,33 @@ import org.jetbrains.ktor.routing.*
 data class Movie(val id: String, val name: String, val imageUrl: String, val overview: String)
 data class ResponseMessage(val message: String)
 
-fun Application.main(){
+fun Application.main() {
     val data = initData()
 
     install(GsonSupport)
     install(DefaultHeaders)
     install(CallLogging)
     install(Routing){
-        get("/api/movies"){
+        get("/api/movies") {
             call.respond(data)
         }
 
-        get("/api/movies/{id}"){
+        get("/api/movies/{id}") {
             val id = call.parameters["id"]
             call.respond(data.filter { it.id == id }[0])
         }
 
-        post("/api/movies"){
+        post("/api/movies") {
             val movie = call.receive<Movie>()
             call.respond(ResponseMessage("$movie has been created!"))
         }
 
-        put("/api/movies/{id}"){
+        put("/api/movies/{id}") {
             val id = call.parameters["id"]
             call.respond(ResponseMessage("$id has been updated!"))
         }
 
-        delete("/api/movies/{id}"){
+        delete("/api/movies/{id}") {
             val id = call.parameters["id"]
             call.respond(ResponseMessage("$id has been deleted!"))
         }
@@ -44,7 +44,7 @@ fun Application.main(){
     }
 }
 
-fun initData(): List<Movie>{
+fun initData(): List<Movie> {
     return listOf(
             Movie("1", "Minions", "http://image.tmdb.org/t/p/w780/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg", "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world."),
             Movie("2", "Beauty and the Beast", "http://image.tmdb.org/t/p/w780/6aUWe0GSl69wMTSWWexsorMIvwU.jpg", "A live-action adaptation of Disney's version of the classic 'Beauty and the Beast' tale of a cursed prince and a beautiful young woman who helps him break the spell."),
