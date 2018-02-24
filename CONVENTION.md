@@ -1,6 +1,6 @@
 ﻿ชื่อกลุ่ม : 8
 
-ภาษาที่จะใช้ : Kotlin
+ภาษา, Framework, Library ที่จะใช้ : Kotlin
 
 ชื่อตัวแปร : testOnClick (Lower Camel Case)
 
@@ -26,7 +26,10 @@
 	* มี White space ทุกครั้งหลังตามด้วย Comma หรือ Semi-Colon(กรณี For) เช่น fucntion(a, b, c), for(a = 5; a < 0; a --)
 	* มี White space ระหว่าง operator ขณะกำหนดค่าตัวแปร เช่น int x = 9; a + b = 100;
 	* ไม่มี White space ก่อนจบการใช้งานด้วย Semi Colon เช่น writeThis; areYou;
-
+  * ใน Vue.js การแสดงผลของค่าใน HTML ให้ใช้ปีกกาสองปีกกาและมี white space ห่างจากชื่อตัวแปรด้านละหนึึ่ง เช่น {{ message }}
+  * ใน HTML มีการเว้นหนึ่ง white space สำหรับการกำหนดค่าที่แตกต่างกัน เช่น <input name="hello" v-model="vue"/> หรือ <div class="hello"> เป็นต้น
+  * ใน JS มีการเว้นวรรคหนึ่งครั้งก่อนกำหนดค่า เช่น message: 'Hello World'
+  
 * การกำหนด Indent : เคาะ 4 Space
 
 * การกำหนดปีกกาของ if / function / class : มี White space ก่อนขึ้นปีกกา เช่น 
@@ -35,5 +38,9 @@ class A {
 
 }
 
+data () {
+
+}
+
 * การ Comment :
-มี Comment กำกับ Method 1 บรรทัด
+มี Comment กำกับ Method 1 บรรทัด เมื่อมีความจำเป็น
