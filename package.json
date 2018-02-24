@@ -1,7 +1,7 @@
 {
-  "name": "soa2018",
+  "name": "soa-vue",
   "version": "1.0.0",
-  "description": "vue.js front-end",
+  "description": "soa front-end group 8",
   "author": "Thasorn",
   "private": true,
   "scripts": {

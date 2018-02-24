@@ -1,21 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import testPage from '@/components/testPage'
+import invoiceForm from '@/components/invoiceForm'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/test',
-      name: 'testPage',
-      component: testPage
+      path: '/invoiceForm',
+      name: 'invoiceForm',
+      component: invoiceForm,
     }
   ]
 })
