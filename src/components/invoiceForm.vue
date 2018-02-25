@@ -1,6 +1,6 @@
 <template>
    <div class="invoiceForm">
-     <div v-if="btnIsSubmit===false">
+     <div v-if="buttonIsSubmitted===false">
        <br>
        <!--Guideline Specified CI Document Context Parameter -->
        รหัสคู่มือมาตรฐาน : <input name="guidelineSpecified.id" v-model="guidelineSpecified.id"/><br>
@@ -13,7 +13,7 @@
        รหัสสาเหตุการออกเอกสาร : <input name="exchangedDocument.purposeCode" v-model="exchangedDocument.purposeCode"/><br>
        เลขที่เอกสารสากล : <input name="exchangedDocument.globalID" v-model="exchangedDocument.globalID"/><br>
        วันเดือนปีและเวลาที่สร้างเอกสาร : <input name="exchangedDocument.creationDateTime" v-model="exchangedDocument.creationDateTime"/><br>
-       <button @click="btnIsSubmit=true">ส่งข้อมูล</button>
+       <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1><br>
@@ -36,7 +36,7 @@
     name: 'invoiceForm',
     data () {
       return {
-        btnIsSubmit: false,
+        buttonIsSubmitted: false,
         guidelineSpecified: {
           id: ''
         },
