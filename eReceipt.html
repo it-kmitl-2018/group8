@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> e-Receipt</title>
+  </head>
+  <body>
+    <div id="eReceipt">
+      <form>
+        <h2>ใบรับอิเล็กทรอนิกส์(e-Receipt)</h2>
+        เลขที่เอกสาร: <input type="text" name="DocumentID" v-model="DocumentID"><br>
+        ชื่อเอกสาร: <input type="text" name="DocumentName"><br><br>
+        ประเภทเอกสาร: <input type="text" name="DocumentType"><br>
+        ธุรกรรมทางการค้า: <input type="text" name="TradeTransaction"><br>
+        ข้อตกลงทางการค้า: <br>
+        <textarea rows="2" cols="30" name="TradeAgreement"></textarea><br><br>
+        ชื่อผู้ขาย: <input type="text" name="SellerName" v-model="SellerName" ><br>
+        เลขที่ประจำตัวผู้เสียภาษีอากร: <input type="text" name="ID"><br>
+        ที่อยู่(ผู้ขาย):<br>
+        <textarea rows="2" cols="30" name="SellerAddress"></textarea><br><br>
+        ชื่อผู้ซื้อ: <input type="text" name="BuyerName" v-model="BuyerName"><br>
+        ที่อยู่(ผู้ซื้อ):<br>
+        <textarea rows="2" cols="30" name="BuyerrAddress"></textarea><br>
+        ข้อมูลการจัดส่ง: <input type="text" name="TradeDeliery"><br><br>
+        รายละเอียดสินค้า: <br>
+        <textarea rows="2" cols="30" name="ProductDetail"></textarea><br>
+        ยอดรวม: <input type="text" name="TotalAmount" v-model="TotalAmount"><br>
+      </form>
+      <button v-on:click="submit">Submit</button><br>
+
+
+    </div>
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+var today = new Date();
+var eInvoice = new Vue({
+  el: '#eReceipt',
+  data: {
+    DocumentID: '',
+    SellerName: '',
+    BuyerName: '',
+    TotalAmount: '',
+  },
+  methods: {
+    submit: function(event) {
+      if (event) {
+        alert('ใบเสร็จรับเงิน \n -------------- \n เลขที่เอกสาร: ' + this.DocumentID+ '\n ผู้ขาย:: ' + this.SellerName+
+         '\n ผู้ซื้อ: ' + this.BuyerName + '\n -------------- \n ยอดรวม: ' + this.TotalAmount +'\n'+ today)
+      }
+    }
+  }
+})
+</script>
