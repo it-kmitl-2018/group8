@@ -3,7 +3,7 @@
      <div v-if="buttonIsSubmitted===false">
        <br>
        <!--Guideline Specified CI Document Context Parameter -->
-       รหัสคู่มือมาตรฐาน : <input name="guidelineSpecified.id" v-model="guidelineSpecified.id"/><br>
+       รหัสคู่มือมาตรฐาน : <input name="guidelineSpecifiedID" v-model="guidelineSpecifiedID"/><br>
        <!--CIIH Exchanged Document-->
        เลขที่เอกสาร : <input name="exchangedDocument.id" v-model="exchangedDocument.id"/><br>
        ชื่อเอกสาร : <input name="exchangedDocument.name" v-model="exchangedDocument.name"/><br>
@@ -18,7 +18,7 @@
      <div v-else>
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1><br>
         <!--Guideline Specified CI Document Context Parameter -->
-        รหัสคู่มือมาตรฐาน : <span>{{ guidelineSpecified.id }}</span><br>
+        รหัสคู่มือมาตรฐาน : <span>{{ guidelineSpecifiedID }}</span><br>
         <!--CIIH Exchanged Document-->
         เลขที่เอกสาร : <span>{{ exchangedDocument.id }}</span><br>
         ชื่อเอกสาร : <span>{{ exchangedDocument.name }}</span><br>
@@ -37,9 +37,7 @@
     data () {
       return {
         buttonIsSubmitted: false,
-        guidelineSpecified: {
-          id: ''
-        },
+        guidelineSpecifiedID: '',
         exchangedDocument: {
           id: '',
           name: '',
