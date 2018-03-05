@@ -5,21 +5,21 @@
        <h1>ใบแจ้งหนี้และใบรับอิเล็กทรอนิกส์</h1>
        <!--Guideline Specified CI Document Context Parameter -->
        <h3>ข้อมูลคู่มือมาตรฐาน</h3>
-       รหัสคู่มือมาตรฐาน : <input name="guidelineSpecifiedID" v-model="guidelineSpecifiedID"/><br>
+       รหัสคู่มือมาตรฐาน : <input v-model="guidelineSpecifiedID"/><br>
        <!--CIIH Exchanged Document-->
        <h3>หัวเรื่องเอกสาร</h3>
-       เลขที่เอกสาร : <input name="exchangedDocument.id" v-model="exchangedDocument.id"/><br>
-       ชื่อเอกสาร : <input name="exchangedDocument.name" v-model="exchangedDocument.name"/><br>
-       รหัสประเภทเอกสาร : <input name="exchangedDocument.typeCode" v-model="exchangedDocument.typeCode"/><br>
-       วันเดือนปี ที่ออกเอกสาร  : <input name="exchangedDocument.issueDateTime" v-model="exchangedDocument.issueDateTime"/><br>
-       สาเหตุการออกเอกสาร : <input name="exchangedDocument.purpose" v-model="exchangedDocument.purpose"/><br>
-       รหัสสาเหตุการออกเอกสาร : <input name="exchangedDocument.purposeCode" v-model="exchangedDocument.purposeCode"/><br>
-       เลขที่เอกสารสากล : <input name="exchangedDocument.globalID" v-model="exchangedDocument.globalID"/><br>
-       วันเดือนปีและเวลาที่สร้างเอกสาร : <input name="exchangedDocument.creationDateTime" v-model="exchangedDocument.creationDateTime"/><br>
+       เลขที่เอกสาร : <input v-model="exchangedDocument.id"/><br>
+       ชื่อเอกสาร : <input v-model="exchangedDocument.name"/><br>
+       รหัสประเภทเอกสาร : <input v-model="exchangedDocument.typeCode"/><br>
+       วันเดือนปี ที่ออกเอกสาร  : <input v-model="exchangedDocument.issueDateTime"/><br>
+       สาเหตุการออกเอกสาร : <input v-model="exchangedDocument.purpose"/><br>
+       รหัสสาเหตุการออกเอกสาร : <input v-model="exchangedDocument.purposeCode"/><br>
+       เลขที่เอกสารสากล : <input v-model="exchangedDocument.globalID"/><br>
+       วันเดือนปีและเวลาที่สร้างเอกสาร : <input v-model="exchangedDocument.creationDateTime"/><br>
        <!--Included Note-->
        <h3>ข้อความเพิ่มเติม</h3>
-       หัวข้อ : <input name="includeNote.subject" v-model="includeNote.subject"/><br>
-       เนื้อหา : <textarea name="includeNote.content" v-model="includeNote.content"/><br>
+       หัวข้อ : <input v-model="includeNote.subject"/><br>
+       เนื้อหา : <textarea v-model="includeNote.content"/><br>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
