@@ -7,10 +7,9 @@
 </template>
 <script>
   export default {
-    name: 'guidelineSpecifiedID',
+    props: ['guidelineSpecifiedID'],
     data () {
       return {
-        guidelineSpecifiedID: ''
       };
     },
     methods: {
