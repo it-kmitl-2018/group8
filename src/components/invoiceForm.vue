@@ -3,9 +3,7 @@
      <div v-if="buttonIsSubmitted===false">
        <br>
        <h1>ใบแจ้งหนี้และใบรับอิเล็กทรอนิกส์</h1>
-       <!--Guideline Specified CI Document Context Parameter -->
-       <h3>ข้อมูลคู่มือมาตรฐาน</h3>
-       รหัสคู่มือมาตรฐาน : <input v-model="guidelineSpecifiedID"/><br>
+       <guidelineSpecified></guidelineSpecified>
        <!--CIIH Exchanged Document-->
        <h3>หัวเรื่องเอกสาร</h3>
        เลขที่เอกสาร : <input v-model="exchangedDocument.id"/><br>
@@ -45,12 +43,17 @@
    </div>
 </template>
 <script>
+  import guidelineSpecified from '@/components/guidelineSpecifiedID.vue'
+
   export default {
     name: 'invoiceForm',
+    components: {
+      'guidelineSpecified': guidelineSpecified
+    },
     data () {
       return {
         buttonIsSubmitted: false,
-        guidelineSpecifiedID: '',
+        //guidelineSpecifiedID: '',
         exchangedDocument: {
           id: '',
           name: '',
