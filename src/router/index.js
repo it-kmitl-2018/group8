@@ -9,7 +9,7 @@ export default new Router({
     {
       path: '/invoiceForm',
       name: 'invoiceForm',
-      component: invoiceForm,
+      component: invoiceForm
     }
   ]
 })
