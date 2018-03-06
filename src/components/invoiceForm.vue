@@ -20,7 +20,13 @@
        <h3>ข้อความเพิ่มเติม</h3>
        หัวข้อ : <input v-model="includeNote.subject"/><br>
        เนื้อหา : <textarea v-model="includeNote.content"/><br>
+       <!--Seller Trade Party-->
+       <h3> ข้อมูลผู้ขาย </h3>
+       รหัสผู้ขาย : <input v-model="sellerTradeParty.id"/><br>
+       รหัสผู้ค่าสากล : <input v-model="sellerTradeParty.globalID"/><br>
+       ชื่อผู้ขาย : <input v-model="sellerTradeParty.name"/><br>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
+
      </div>
      <div v-else>
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
@@ -41,6 +47,12 @@
         <h3>ข้อความเพิ่มเติม</h3>
         หัวข้อ : <span>{{ includeNote.subject }}</span><br>
         เนื้อหา : <span>{{ includeNote.content }}</span><br>
+        <!--Seller Trade Party-->
+        <h3> ข้อมูลผู้ขาย </h3>
+        รหัสผู้ขาย : <span>{{ sellerTradeParty.id }}</span><br>
+        รหัสผู้ค่าสากล : <span>{{ sellerTradeParty.globalid }}</span><br>
+        ชื่อผู้ขาย : <span>{{ sellerTradeParty.id }}</span><br>
+        <input v-model="sellerTradeParty.name"/><br>
      </div>
    </div>
 </template>
@@ -64,6 +76,11 @@
         includeNote: {
           subject: '',
           content: ''
+        },
+        sellerTradeParty: {
+          id: '',
+          globalID: '',
+          name: ''
         }
       };
     },
