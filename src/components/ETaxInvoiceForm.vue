@@ -1,5 +1,5 @@
 <template>
-   <div class="invoiceForm">
+   <div class="ETaxInvoiceForm">
      <div v-if="buttonIsSubmitted===false">
        <br>
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
