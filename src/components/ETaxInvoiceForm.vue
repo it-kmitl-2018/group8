@@ -3,14 +3,7 @@
      <div v-if="buttonIsSubmitted===false">
        <br>
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-       <!--Seller-->
-       <h2>ผู้ซื้อ</h2>
-       <!--Seller Trade Party-->
-       รหัสผู้ค้า(ผู้ขาย) : <input v-model="seller.id"/><br>
-       รหัสผู้ค้าสากล(ผู้ขาย) : <input v-model="seller.globalID"/><br>
-       ชื่อผู้ขาย : <input v-model="seller.name"/><br>
-       <!--Specified Tax Registration-->
-       เลขประจำตัวผู้เสียภาษีอากร : <input v-model="seller.taxID"/><br>
+       <sellerinfoform :sellerInfoForm="seller"></sellerinfoform>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
@@ -25,11 +18,11 @@
         ชื่อผู้ขาย : <span>{{ seller.name }}</span><br>
         <!--Specified Tax Registration-->
         เลขประจำตัวผู้เสียภาษีอากร : <span>{{ seller.taxID }}</span><br>
-
      </div>
    </div>
 </template>
 <script>
+  import SellerInfoForm from '@/components/SellerInfoForm.vue'
 
   export default {
     data () {
@@ -42,6 +35,9 @@
           taxID: ''
         }
       };
+    },
+    components: {
+      sellerinfoform: SellerInfoForm
     },
     methods: {
     }
