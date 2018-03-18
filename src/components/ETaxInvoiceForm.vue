@@ -10,8 +10,7 @@
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
         <!--Guideline Specified CI Document Context Parameter -->
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-        <h2>ผู้ซื้อ</h2>
-        รหัสคู่มือมาตรฐาน : <span>{{ seller.id }}</span><br>
+        <h2>ผู้ขาย</h2>
         <!--Seller Trade Party-->
         รหัสผู้ค้า(ผู้ขาย) : <span>{{ seller.id }}</span><br>
         รหัสผู้ค้าสากล(ผู้ขาย) : <span>{{ seller.globalID }}</span><br>
