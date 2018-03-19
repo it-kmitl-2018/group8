@@ -20,6 +20,7 @@
      </div>
    </div>
 </template>
+
 <script>
   import SellerInfoForm from '@/components/SellerInfoForm.vue'
 
