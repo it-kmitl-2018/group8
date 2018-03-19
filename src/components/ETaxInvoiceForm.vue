@@ -3,7 +3,7 @@
      <div v-if="buttonIsSubmitted===false">
        <br>
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-       <sellerinfoform :sellerInfoForm="seller"></sellerinfoform>
+       <seller-info-form :sellerInfoForm="seller"></seller-info-form>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
@@ -36,7 +36,7 @@
       };
     },
     components: {
-      sellerinfoform: SellerInfoForm
+      SellerInfoForm
     },
     methods: {
     }
