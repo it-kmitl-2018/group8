@@ -21,7 +21,7 @@
    </div>
 </template>
 <script>
-  import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
+  import SellerInfoForm from '@/components/SellerInfoForm.vue'
 
   export default {
     data () {
