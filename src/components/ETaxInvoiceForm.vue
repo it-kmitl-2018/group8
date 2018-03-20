@@ -3,7 +3,7 @@
      <div v-if="buttonIsSubmitted===false">
        <br>
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-       <seller-info-form :sellerInfoForm="seller"></seller-info-form>
+       <seller-info-form :sellerInfoForm="sellerInfo"></seller-info-form>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
@@ -12,11 +12,11 @@
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
         <h2>ผู้ขาย</h2>
         <!--Seller Trade Party-->
-        รหัสผู้ค้า(ผู้ขาย) : <span>{{ seller.id }}</span><br>
-        รหัสผู้ค้าสากล(ผู้ขาย) : <span>{{ seller.globalID }}</span><br>
-        ชื่อผู้ขาย : <span>{{ seller.name }}</span><br>
+        รหัสผู้ค้า(ผู้ขาย) : <span>{{ sellerInfo.id }}</span><br>
+        รหัสผู้ค้าสากล(ผู้ขาย) : <span>{{ sellerInfo.globalID }}</span><br>
+        ชื่อผู้ขาย : <span>{{ sellerInfo.name }}</span><br>
         <!--Specified Tax Registration-->
-        เลขประจำตัวผู้เสียภาษีอากร : <span>{{ seller.taxID }}</span><br>
+        เลขประจำตัวผู้เสียภาษีอากร : <span>{{ sellerInfo.taxID }}</span><br>
      </div>
    </div>
 </template>
@@ -27,7 +27,7 @@
     data () {
       return {
         buttonIsSubmitted: false,
-        seller: {
+        sellerInfo: {
           id: '',
           globalID: '',
           name: '',
