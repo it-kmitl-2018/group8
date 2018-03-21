@@ -27,8 +27,8 @@
         <!--Postal Trade Address -->
         รหัสไปรษณีย์: <span>{{ seller.postalCode }}</span><br>
         ชื่ออาคาร: <span>{{ seller.building }}</span><br>
-        ที่อยู่บรรทัดที่ 1: <span>{{ seller.addressLineone }}</span><br>
-        ที่อยู่บรรทัดที่ 2: <span>{{ seller.addressLinetwo }}</span><br>
+        ที่อยู่บรรทัดที่ 1: <span>{{ seller.addressLineOne }}</span><br>
+        ที่อยู่บรรทัดที่ 2: <span>{{ seller.addressLineTwo }}</span><br>
         ซอย: <span>{{ seller.addressLineThree }}</span><br>
         หมู่บ้าน: <span>{{ seller.addressLineFour }}</span><br>
         หมู่ที่: <span>{{ seller.addressLineFive }}</span><br>
