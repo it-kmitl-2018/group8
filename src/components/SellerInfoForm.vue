@@ -18,8 +18,8 @@
     <!--Postal Trade Address -->
     รหัสไปรษณีย์: <input v-model="sellerInfoForm.postalCode"/><br>
     ชื่ออาคาร: <input v-model="sellerInfoForm.building"/><br>
-    ที่อยู่บรรทัดที่ 1: <input v-model="sellerInfoForm.addressLineone"/><br>
-    ที่อยู่บรรทัดที่ 2: <input v-model="sellerInfoForm.addressLinetwo"/><br>
+    ที่อยู่บรรทัดที่ 1: <input v-model="sellerInfoForm.addressLineOne"/><br>
+    ที่อยู่บรรทัดที่ 2: <input v-model="sellerInfoForm.addressLineTwo"/><br>
     ซอย: <input v-model="sellerInfoForm.addressLineThree"/><br>
     หมู่บ้าน: <input v-model="sellerInfoForm.addressLineFour"/><br>
     หมู่ที่: <input v-model="sellerInfoForm.addressLineFive"/><br>
