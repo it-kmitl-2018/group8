@@ -4,6 +4,7 @@
        <br>
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
        <seller-info-form :sellerInfoForm="seller"></seller-info-form>
+       <buyer-info-form :buyerInfoForm="buyer"></buyer-info-form>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
@@ -43,6 +44,7 @@
 </template>
 <script>
   import SellerInfoForm from '@/components/SellerInfoForm.vue'
+  import BuyerInfoForm from '@/components/BuyerInfoForm.vue'
 
   export default {
     data () {
@@ -70,11 +72,36 @@
           countryID: '',
           provinceID: '',
           houseNumber: ''
+        },
+        buyer: {
+          id: '',
+          globalID: '',
+          name: '',
+          taxID: '',
+          personName: '',
+          departName: '',
+          email: '',
+          phoneNumber: '',
+          postID: '',
+          buildingName: '',
+          buildingNumber: '',
+          addressLineOne: '',
+          addressLineTwo: '',
+          addressLineThree: '',
+          addressLineFour: '',
+          addressLineFive: '',
+          streetName: '',
+          cityName: '',
+          divisionName: '',
+          countryID: '',
+          provinceID: '',
+
         }
       };
     },
     components: {
-      SellerInfoForm
+      SellerInfoForm,
+      BuyerInfoForm
     },
     methods: {
     }
