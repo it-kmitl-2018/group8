@@ -43,34 +43,13 @@
 </template>
 <script>
   import SellerInfoForm from '@/components/SellerInfoForm.vue'
+  import SellerData from '@/data/Seller.data.js'
 
   export default {
     data () {
       return {
         buttonIsSubmitted: false,
-        seller: {
-          id: '',
-          globalID: '',
-          name: '',
-          taxID: '',
-          personName: '',
-          departmentName: '',
-          email: '',
-          phoneNumber: '',
-          postalCode: '',
-          building: '',
-          addressLineOne: '',
-          addressLineTwo: '',
-          addressLineThree: '',
-          addressLineFour: '',
-          addressLineFive: '',
-          street: '',
-          district: '',
-          subDistrict: '',
-          countryID: '',
-          provinceID: '',
-          houseNumber: ''
-        }
+        seller: SellerData
       };
     },
     components: {
