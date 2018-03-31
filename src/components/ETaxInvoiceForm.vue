@@ -16,11 +16,11 @@
    </div>
 </template>
 <script>
-import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
-import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
-import SellerData from '@/data/Seller.data.js'
-import RecipientData from '@/data/Recipient.data.js'
 import SellerInfoConfirm from '@/components/confirm_pages/SellerInfoConfirm.vue'
+import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
+import SellerData from '@/data/Seller.data.js'
+import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
+import RecipientData from '@/data/Recipient.data.js'
 
 export default {
   data () {
