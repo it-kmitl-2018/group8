@@ -11,7 +11,7 @@
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
         <!--Guideline Specified CI Document Context Parameter -->
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-        <seller-info-confirm></seller-info-confirm>
+        <seller-info-confirm :sellerInfoConfirm="seller"></seller-info-confirm>
      </div>
    </div>
 </template>
@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       buttonIsSubmitted: false,
-      seller: SellerData,
+      seller: SellerData.data(),
       recipient: RecipientData
     }
   },
