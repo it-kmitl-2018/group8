@@ -22,6 +22,6 @@ export default {
       countryID: '',
       provinceID: '',
       houseNumber: ''
-    };
+    }
   }
 }
