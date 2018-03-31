@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       buttonIsSubmitted: false,
-      seller: SellerData.data(),
+      seller: SellerData.data,
       recipient: RecipientData
     }
   },
