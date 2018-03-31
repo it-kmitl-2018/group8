@@ -31,13 +31,13 @@
    </div>
 </template>
 <script>
-  import SellerData from '@/data/Seller.data.js'
-  
-  export default {
-    data () {
-      return {
-        seller: SellerData
-      };
+import SellerData from '@/data/Seller.data.js'
+
+export default {
+  data () {
+    return {
+      seller: SellerData
     }
   }
+}
 </script>
