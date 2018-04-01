@@ -11,22 +11,22 @@
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
         <!--Guideline Specified CI Document Context Parameter -->
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-        <seller-info-confirm></seller-info-confirm>
+        <seller-info-confirm :sellerInfoConfirm="seller"></seller-info-confirm>
      </div>
    </div>
 </template>
 <script>
-import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
-import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
-import SellerData from '@/data/Seller.data.js'
-import RecipientData from '@/data/Recipient.data.js'
 import SellerInfoConfirm from '@/components/confirm_pages/SellerInfoConfirm.vue'
+import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
+import SellerData from '@/data/Seller.data.js'
+import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
+import RecipientData from '@/data/Recipient.data.js'
 
 export default {
   data () {
     return {
       buttonIsSubmitted: false,
-      seller: SellerData,
+      seller: SellerData.data,
       recipient: RecipientData
     }
   },
