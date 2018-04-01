@@ -3,15 +3,15 @@
      <div v-if="buttonIsSubmitted===false">
        <br>
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-       <seller-info-form :sellerInfoForm="seller"></seller-info-form>
-       <recipient-info-form :recipientInfoForm="recipient"></recipient-info-form>
+       <seller-info-form :sellerFormProp="seller"></seller-info-form>
+       <recipient-info-form :recipientFormProp="recipient"></recipient-info-form>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
         <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
         <!--Guideline Specified CI Document Context Parameter -->
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-        <seller-info-confirm :sellerInfoConfirm="seller"></seller-info-confirm>
+        <seller-info-confirm :sellerConfirmProp="seller"></seller-info-confirm>
      </div>
    </div>
 </template>
