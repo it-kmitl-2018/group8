@@ -12,6 +12,7 @@
         <!--Guideline Specified CI Document Context Parameter -->
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
         <seller-info-confirm :sellerConfirmProp="seller"></seller-info-confirm>
+        <recipient-info-confirm :recipientConfirmProp="recipient"></recipient-info-confirm>
      </div>
    </div>
 </template>
@@ -19,6 +20,7 @@
 import SellerInfoConfirm from '@/components/confirm_pages/SellerInfoConfirm.vue'
 import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
 import SellerData from '@/data/Seller.data.js'
+import RecipientInfoConfirm from '@/components/confirm_pages/RecipientInfoConfirm.vue'
 import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
 import RecipientData from '@/data/Recipient.data.js'
 
@@ -27,13 +29,14 @@ export default {
     return {
       buttonIsSubmitted: false,
       seller: SellerData.data,
-      recipient: RecipientData
+      recipient: RecipientData.data
     }
   },
   components: {
     SellerInfoForm,
     SellerInfoConfirm,
-    RecipientInfoForm
+    RecipientInfoForm,
+    RecipientInfoConfirm
   },
   methods: {
   }
