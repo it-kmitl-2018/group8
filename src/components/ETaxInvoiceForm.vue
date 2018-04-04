@@ -14,6 +14,7 @@
         <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
         <seller-info-confirm :sellerConfirmProp="seller"></seller-info-confirm>
         <recipient-info-confirm :recipientConfirmProp="recipient"></recipient-info-confirm>
+        <document-recipient-info-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-info-confirm>
      </div>
    </div>
 </template>
@@ -24,6 +25,7 @@ import SellerData from '@/data/Seller.data.js'
 import RecipientInfoConfirm from '@/components/confirm_pages/RecipientInfoConfirm.vue'
 import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
 import RecipientData from '@/data/Recipient.data.js'
+import DocumentRecipientInfoConfirm from '@/components/confirm_pages/DocumentRecipientInfoConfirm.vue'
 import DocumentRecipientInfoForm from '@/components/form_pages/DocumentRecipientInfoForm.vue'
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 
@@ -41,7 +43,8 @@ export default {
     SellerInfoConfirm,
     RecipientInfoForm,
     RecipientInfoConfirm,
-    DocumentRecipientInfoForm
+    DocumentRecipientInfoForm,
+    DocumentRecipientInfoConfirm
   },
   methods: {
   }
