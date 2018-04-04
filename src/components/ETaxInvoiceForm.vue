@@ -5,6 +5,7 @@
        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
        <seller-info-form :sellerFormProp="seller"></seller-info-form>
        <recipient-info-form :recipientFormProp="recipient"></recipient-info-form>
+       <document-recipient-info-form :documentRecipientFormProp="documentRecipient"></document-recipient-info-form>
        <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
      </div>
      <div v-else>
@@ -23,20 +24,24 @@ import SellerData from '@/data/Seller.data.js'
 import RecipientInfoConfirm from '@/components/confirm_pages/RecipientInfoConfirm.vue'
 import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
 import RecipientData from '@/data/Recipient.data.js'
+import DocumentRecipientInfoForm from '@/components/form_pages/DocumentRecipientInfoForm.vue'
+import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 
 export default {
   data () {
     return {
       buttonIsSubmitted: false,
       seller: SellerData.data,
-      recipient: RecipientData.data
+      recipient: RecipientData.data,
+      documentRecipient: DocumentRecipientData.data
     }
   },
   components: {
     SellerInfoForm,
     SellerInfoConfirm,
     RecipientInfoForm,
-    RecipientInfoConfirm
+    RecipientInfoConfirm,
+    DocumentRecipientInfoForm
   },
   methods: {
   }
