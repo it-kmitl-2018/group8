@@ -29,7 +29,7 @@ export default {
   components: {
     SellerInfoForm,
     RecipientInfoForm,
-    DocumentRecipientInfoForm,
+    DocumentRecipientInfoForm
   },
   methods: {
   }
