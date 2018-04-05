@@ -1,38 +1,26 @@
 <template>
    <div class="ETaxInvoiceForm">
-     <div v-if="buttonIsSubmitted===false">
-       <br>
-       <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-       <seller-info-form :sellerFormProp="seller"></seller-info-form>
-       <recipient-info-form :recipientFormProp="recipient"></recipient-info-form>
-       <document-recipient-info-form :documentRecipientFormProp="documentRecipient"></document-recipient-info-form>
-       <button @click="buttonIsSubmitted=true"> ส่งข้อมูล </button>
-     </div>
-     <div v-else>
-        <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
-        <!--Guideline Specified CI Document Context Parameter -->
-        <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-        <seller-info-confirm :sellerConfirmProp="seller"></seller-info-confirm>
-        <recipient-info-confirm :recipientConfirmProp="recipient"></recipient-info-confirm>
-        <document-recipient-info-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-info-confirm>
-     </div>
+      <br>
+      <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
+      <seller-info-form :sellerFormProp="seller"></seller-info-form>
+      <recipient-info-form :recipientFormProp="recipient"></recipient-info-form>
+      <document-recipient-info-form :documentRecipientFormProp="documentRecipient"></document-recipient-info-form>
+      <router-link :to="{name: 'ETaxInvoiceConfirm'}">
+        <button> ส่งข้อมูล </button>
+      </router-link>
    </div>
 </template>
 <script>
-import SellerInfoConfirm from '@/components/confirm_pages/SellerInfoConfirm.vue'
 import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
 import SellerData from '@/data/Seller.data.js'
-import RecipientInfoConfirm from '@/components/confirm_pages/RecipientInfoConfirm.vue'
 import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
 import RecipientData from '@/data/Recipient.data.js'
-import DocumentRecipientInfoConfirm from '@/components/confirm_pages/DocumentRecipientInfoConfirm.vue'
 import DocumentRecipientInfoForm from '@/components/form_pages/DocumentRecipientInfoForm.vue'
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 
 export default {
   data () {
     return {
-      buttonIsSubmitted: false,
       seller: SellerData.data,
       recipient: RecipientData.data,
       documentRecipient: DocumentRecipientData.data
@@ -40,11 +28,8 @@ export default {
   },
   components: {
     SellerInfoForm,
-    SellerInfoConfirm,
     RecipientInfoForm,
-    RecipientInfoConfirm,
     DocumentRecipientInfoForm,
-    DocumentRecipientInfoConfirm
   },
   methods: {
   }
