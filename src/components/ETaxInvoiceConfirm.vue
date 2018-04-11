@@ -21,7 +21,6 @@ import PayeeData from '@/data/Payee.data.js'
 export default {
   data () {
     return {
-      buttonIsSubmitted: false,
       seller: SellerData.data,
       recipient: RecipientData.data,
       documentRecipient: DocumentRecipientData.data,
