@@ -24,7 +24,7 @@ export default {
       buttonIsSubmitted: false,
       seller: SellerData.data,
       recipient: RecipientData.data,
-      documentRecipient: DocumentRecipientData.data
+      documentRecipient: DocumentRecipientData.data,
       payee: PayeeData.data
     }
   },
