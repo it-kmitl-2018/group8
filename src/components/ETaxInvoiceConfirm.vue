@@ -5,6 +5,7 @@
     <seller-info-confirm :sellerConfirmProp="seller"></seller-info-confirm>
     <recipient-info-confirm :recipientConfirmProp="recipient"></recipient-info-confirm>
     <document-recipient-info-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-info-confirm>
+    <payee-info-confirm :payeeConfirmProp="payee"></payee-info-confirm>
   </div>
 </template>
 <script>
@@ -14,6 +15,8 @@ import RecipientInfoConfirm from '@/components/confirm_pages/RecipientInfoConfir
 import RecipientData from '@/data/Recipient.data.js'
 import DocumentRecipientInfoConfirm from '@/components/confirm_pages/DocumentRecipientInfoConfirm.vue'
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
+import PayeeInfoConfirm from '@/components/confirm_pages/PayeeInfoConfirm.vue'
+import PayeeData from '@/data/Payee.data.js'
 
 export default {
   data () {
@@ -22,12 +25,14 @@ export default {
       seller: SellerData.data,
       recipient: RecipientData.data,
       documentRecipient: DocumentRecipientData.data
+      payee: PayeeData.data
     }
   },
   components: {
     SellerInfoConfirm,
     RecipientInfoConfirm,
-    DocumentRecipientInfoConfirm
+    DocumentRecipientInfoConfirm,
+    PayeeInfoConfirm
   },
   methods: {
   }
