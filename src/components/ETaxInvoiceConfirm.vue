@@ -2,20 +2,20 @@
   <div class="ETaxInvoiceConfirm">
     <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
     <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-    <seller-info-confirm :sellerConfirmProp="seller"></seller-info-confirm>
-    <recipient-info-confirm :recipientConfirmProp="recipient"></recipient-info-confirm>
-    <document-recipient-info-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-info-confirm>
-    <payee-info-confirm :payeeConfirmProp="payee"></payee-info-confirm>
+    <seller-confirm :sellerConfirmProp="seller"></seller-confirm>
+    <recipient-confirm :recipientConfirmProp="recipient"></recipient-confirm>
+    <document-recipient-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-confirm>
+    <payee-confirm :payeeConfirmProp="payee"></payee-confirm>
   </div>
 </template>
 <script>
-import SellerInfoConfirm from '@/components/confirm_pages/SellerInfoConfirm.vue'
+import SellerConfirm from '@/components/confirm_pages/SellerConfirm.vue'
 import SellerData from '@/data/Seller.data.js'
-import RecipientInfoConfirm from '@/components/confirm_pages/RecipientInfoConfirm.vue'
+import RecipientConfirm from '@/components/confirm_pages/RecipientConfirm.vue'
 import RecipientData from '@/data/Recipient.data.js'
-import DocumentRecipientInfoConfirm from '@/components/confirm_pages/DocumentRecipientInfoConfirm.vue'
+import DocumentRecipientConfirm from '@/components/confirm_pages/DocumentRecipientConfirm.vue'
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
-import PayeeInfoConfirm from '@/components/confirm_pages/PayeeInfoConfirm.vue'
+import PayeeConfirm from '@/components/confirm_pages/PayeeConfirm.vue'
 import PayeeData from '@/data/Payee.data.js'
 
 export default {
@@ -28,10 +28,10 @@ export default {
     }
   },
   components: {
-    SellerInfoConfirm,
-    RecipientInfoConfirm,
-    DocumentRecipientInfoConfirm,
-    PayeeInfoConfirm
+    SellerConfirm,
+    RecipientConfirm,
+    DocumentRecipientConfirm,
+    PayeeConfirm
   },
   methods: {
   }
