@@ -2,23 +2,23 @@
    <div class="ETaxInvoiceForm">
       <br>
       <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-      <seller-info-form :sellerFormProp="seller"></seller-info-form>
-      <recipient-info-form :recipientFormProp="recipient"></recipient-info-form>
-      <document-recipient-info-form :documentRecipientFormProp="documentRecipient"></document-recipient-info-form>
-      <payee-info-form :payeeFormProp="payee"></payee-info-form>
+      <seller-form :sellerFormProp="seller"></seller-form>
+      <recipient-form :recipientFormProp="recipient"></recipient-form>
+      <document-recipient-form :documentRecipientFormProp="documentRecipient"></document-recipient-form>
+      <payee-form :payeeFormProp="payee"></payee-form>
       <router-link :to="{name: 'ETaxInvoiceConfirm'}">
         <button> ส่งข้อมูล </button>
       </router-link>
    </div>
 </template>
 <script>
-import SellerInfoForm from '@/components/form_pages/SellerInfoForm.vue'
+import SellerForm from '@/components/form_pages/SellerForm.vue'
 import SellerData from '@/data/Seller.data.js'
-import RecipientInfoForm from '@/components/form_pages/RecipientInfoForm.vue'
+import RecipientForm from '@/components/form_pages/RecipientForm.vue'
 import RecipientData from '@/data/Recipient.data.js'
-import DocumentRecipientInfoForm from '@/components/form_pages/DocumentRecipientInfoForm.vue'
+import DocumentRecipientForm from '@/components/form_pages/DocumentRecipientForm.vue'
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
-import PayeeInfoForm from '@/components/form_pages/PayeeInfoForm.vue'
+import PayeeForm from '@/components/form_pages/PayeeForm.vue'
 import PayeeData from '@/data/Payee.data.js'
 
 export default {
@@ -31,10 +31,10 @@ export default {
     }
   },
   components: {
-    SellerInfoForm,
-    RecipientInfoForm,
-    DocumentRecipientInfoForm,
-    PayeeInfoForm
+    SellerForm,
+    RecipientForm,
+    DocumentRecipientForm,
+    PayeeForm
   },
   methods: {
   }
