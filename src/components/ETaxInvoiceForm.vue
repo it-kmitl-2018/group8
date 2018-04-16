@@ -4,7 +4,7 @@
       <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
       <seller-form :sellerFormProp="seller"></seller-form>
       <recipient-form :recipientFormProp="recipient"></recipient-form>
-      <tax-invoice-form :taxFormProp="taxInvoice"></tax-invoice-form>
+      <tax-invoice-form :taxInvoiceFormProp="taxInvoice"></tax-invoice-form>
       <document-recipient-form :documentRecipientFormProp="documentRecipient"></document-recipient-form>
       <payee-form :payeeFormProp="payee"></payee-form>
       <router-link :to="{name: 'ETaxInvoiceConfirm'}">
