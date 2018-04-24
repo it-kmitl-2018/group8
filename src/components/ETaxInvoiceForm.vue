@@ -4,6 +4,7 @@
       <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
       <seller-form :sellerFormProp="seller"></seller-form>
       <recipient-form :recipientFormProp="recipient"></recipient-form>
+      <tax-invoice-form :taxInvoiceFormProp="taxInvoice"></tax-invoice-form>
       <document-recipient-form :documentRecipientFormProp="documentRecipient"></document-recipient-form>
       <payee-form :payeeFormProp="payee"></payee-form>
       <router-link :to="{name: 'ETaxInvoiceConfirm'}">
@@ -16,6 +17,8 @@ import SellerForm from '@/components/form_pages/SellerForm.vue'
 import SellerData from '@/data/Seller.data.js'
 import RecipientForm from '@/components/form_pages/RecipientForm.vue'
 import RecipientData from '@/data/Recipient.data.js'
+import TaxInvoiceForm from '@/components/form_pages/TaxInvoiceForm.vue'
+import TaxInvoiceData from '@/data/TaxInvoice.data.js'
 import DocumentRecipientForm from '@/components/form_pages/DocumentRecipientForm.vue'
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 import PayeeForm from '@/components/form_pages/PayeeForm.vue'
@@ -26,6 +29,7 @@ export default {
     return {
       seller: SellerData.data,
       recipient: RecipientData.data,
+      taxInvoice: TaxInvoiceData.data,
       documentRecipient: DocumentRecipientData.data,
       payee: PayeeData.data
     }
@@ -33,6 +37,7 @@ export default {
   components: {
     SellerForm,
     RecipientForm,
+    TaxInvoiceForm,
     DocumentRecipientForm,
     PayeeForm
   },
