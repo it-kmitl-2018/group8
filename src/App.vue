@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <div>
-        <router-link :to="{name: 'app'}"> หน้าแรก </router-link>
-        <router-link :to="{name: 'EReceiptForm'}"> ใบเสร็จ </router-link>
-        <router-link :to="{name: 'ETaxInvoiceForm'}"> ใบแจ้งหนี้ </router-link>
-    </div>
-    <router-view></router-view>
+    <Navbar />
+    <b-container>
+      <router-view></router-view>
+    </b-container>
   </div>
 </template>
 <script>
+import Navbar from '@/components/Navbar'
+
 export default {
   name: 'app',
+  components: {
+    Navbar
+  },
   data () {
     return {
 
@@ -19,3 +22,10 @@ export default {
 }
 
 </script>
+
+<style>
+body {
+  margin-top: 48px;
+}
+
+</style>
