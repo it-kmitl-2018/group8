@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <Navbar />
+    <NavigationBar />
     <b-container>
       <router-view></router-view>
     </b-container>
   </div>
 </template>
 <script>
-import Navbar from '@/components/Navbar'
+
+import NavigationBar from '@/components/Navbar'
 
 export default {
   name: 'app',
   components: {
-    Navbar
+    NavigationBar
   },
   data () {
     return {
