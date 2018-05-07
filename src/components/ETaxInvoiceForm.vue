@@ -2,13 +2,28 @@
    <div class="ETaxInvoiceForm">
       <br>
       <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-      <seller-form :sellerFormProp="seller"></seller-form>
-      <recipient-form :recipientFormProp="recipient"></recipient-form>
-      <tax-invoice-form :taxInvoiceFormProp="taxInvoice"></tax-invoice-form>
-      <document-recipient-form :documentRecipientFormProp="documentRecipient"></document-recipient-form>
-      <payee-form :payeeFormProp="payee"></payee-form>
+      <b-card no-body>
+        <b-tabs pills card vertical>
+          <b-tab title="ผู้ขาย">
+            <seller-form :sellerFormProp="seller"></seller-form>
+          </b-tab>
+          <b-tab title="ผู้รับ">
+            <recipient-form :recipientFormProp="recipient"></recipient-form>
+          </b-tab>
+          <b-tab title="ข้อมูลภาษี">
+            <tax-invoice-form :taxInvoiceFormProp="taxInvoice"></tax-invoice-form>
+          </b-tab>
+          <b-tab title="ผู้รับเอกสาร">
+            <document-recipient-form :documentRecipientFormProp="documentRecipient"></document-recipient-form>
+          </b-tab>
+          <b-tab title="ผู้รับชำระเงิน">
+            <payee-form :payeeFormProp="payee"></payee-form>
+          </b-tab>
+        </b-tabs>
+      </b-card>
+
       <router-link :to="{name: 'ETaxInvoiceConfirm'}">
-        <button> ส่งข้อมูล </button>
+        <b-button variant="success">ยืนยัน</b-button>
       </router-link>
    </div>
 </template>

@@ -2,10 +2,23 @@
   <div class="ETaxInvoiceConfirm">
     <h1> โปรดตรวจสอบข้อมูลดังกล่าวว่าถูกต้องหรือไม่ </h1>
     <h1>ใบกำกับภาษีอิเล็กทรอนิกส์</h1>
-    <seller-confirm :sellerConfirmProp="seller"></seller-confirm>
-    <recipient-confirm :recipientConfirmProp="recipient"></recipient-confirm>
-    <document-recipient-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-confirm>
-    <payee-confirm :payeeConfirmProp="payee"></payee-confirm>
+    <b-card no-body>
+      <b-tabs pills card vertical>
+        <b-tab title="ผู้ขาย">
+          <seller-confirm :sellerConfirmProp="seller"></seller-confirm>
+        </b-tab>
+        <b-tab title="ผู้รับ">
+          <recipient-confirm :recipientConfirmProp="recipient"></recipient-confirm>
+        </b-tab>
+        <b-tab title="ผู้รับเอกสาร">
+          <document-recipient-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-confirm>
+        </b-tab>
+        <b-tab title="ผู้รับชำระเงิน">
+          <payee-confirm :payeeConfirmProp="payee"></payee-confirm>
+        </b-tab>
+      </b-tabs>
+    </b-card>
+
   </div>
 </template>
 <script>
