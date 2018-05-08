@@ -18,6 +18,10 @@
         </b-tab>
       </b-tabs>
     </b-card>
+    <b-button variant="success" v-on:click="sendData()">ยืนยัน</b-button>
+    <router-link :to="{name: 'ETaxInvoiceForm'}">
+      <b-button variant="danger">ยกเลิก</b-button>
+    </router-link>
 
   </div>
 </template>
@@ -30,6 +34,7 @@ import DocumentRecipientConfirm from '@/components/confirm_pages/DocumentRecipie
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 import PayeeConfirm from '@/components/confirm_pages/PayeeConfirm.vue'
 import PayeeData from '@/data/Payee.data.js'
+import axios from 'axios'
 
 export default {
   data () {
@@ -47,6 +52,18 @@ export default {
     PayeeConfirm
   },
   methods: {
+    sendData () {
+      axios({
+        method: 'POST',
+        url: 'http://localhost:8888/etaxinvoice',
+        data: this.seller,
+        responseType: 'json'
+      }) .then(result => {
+        this.response = result.data
+      }, error => {
+        console.error(error)
+      })
+    }
   }
 }
 </script>
