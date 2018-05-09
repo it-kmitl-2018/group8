@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import ETaxInvoiceForm from '@/components/ETaxInvoiceForm'
 import ETaxInvoiceConfirm from '@/components/ETaxInvoiceConfirm'
 import EReceiptForm from '@/components/EReceiptForm'
+import EReceiptConfirm from '@/components/EReceiptConfirm'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/EReceiptForm',
       name: 'EReceiptForm',
       component: EReceiptForm
+    },
+    {
+      path: '/EReceiptConfirm',
+      name: 'EReceiptConfirm',
+      component: EReceiptConfirm
     }
   ]
 })
