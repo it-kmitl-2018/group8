@@ -5,16 +5,16 @@
     <b-card no-body>
       <b-tabs pills card vertical>
         <b-tab title="ผู้ขาย">
-          <seller-confirm :sellerConfirmProp="seller"></seller-confirm>
+          <seller-confirm :sellerConfirmProp="input.seller"></seller-confirm>
         </b-tab>
         <b-tab title="ผู้รับ">
-          <recipient-confirm :recipientConfirmProp="recipient"></recipient-confirm>
+          <recipient-confirm :recipientConfirmProp="input.recipient"></recipient-confirm>
         </b-tab>
         <b-tab title="ผู้รับเอกสาร">
-          <document-recipient-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-confirm>
+          <document-recipient-confirm :documentRecipientConfirmProp="input.documentRecipient"></document-recipient-confirm>
         </b-tab>
         <b-tab title="ผู้รับชำระเงิน">
-          <payee-confirm :payeeConfirmProp="payee"></payee-confirm>
+          <payee-confirm :payeeConfirmProp="input.payee"></payee-confirm>
         </b-tab>
       </b-tabs>
     </b-card>
@@ -39,10 +39,12 @@ import { AXIOS } from '@/http-common'
 export default {
   data () {
     return {
-      seller: SellerData.data,
-      recipient: RecipientData.data,
-      documentRecipient: DocumentRecipientData.data,
-      payee: PayeeData.data
+      input: {
+        seller: SellerData.data,
+        recipient: RecipientData.data,
+        documentRecipient: DocumentRecipientData.data,
+        payee: PayeeData.data
+      }
     }
   },
   components: {
@@ -64,7 +66,7 @@ export default {
     },
     setParameter () {
       let paras = new URLSearchParams()
-      paras = this.seller
+      paras = this.input
       return paras
     }
   }
