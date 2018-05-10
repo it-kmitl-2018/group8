@@ -34,7 +34,7 @@ import DocumentRecipientConfirm from '@/components/confirm_pages/DocumentRecipie
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 import PayeeConfirm from '@/components/confirm_pages/PayeeConfirm.vue'
 import PayeeData from '@/data/Payee.data.js'
-import axios from 'axios'
+import { AXIOS } from '@/http-common'
 
 export default {
   data () {
@@ -53,16 +53,19 @@ export default {
   },
   methods: {
     sendData () {
-      axios({
-        method: 'POST',
-        url: 'http://localhost:8888/etaxinvoice',
-        data: this.seller,
-        responseType: 'json'
-      }) .then(result => {
-        this.response = result.data
-      }, error => {
-        console.error(error)
-      })
+      let paras = this.setParameter()
+      AXIOS.post('/etaxinvoice', paras)
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    },
+    setParameter () {
+      let paras = new URLSearchParams()
+      paras = this.seller
+      return paras
     }
   }
 }
