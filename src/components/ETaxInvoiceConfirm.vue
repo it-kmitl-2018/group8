@@ -18,7 +18,7 @@
         </b-tab>
       </b-tabs>
     </b-card>
-    <b-button variant="success" v-on:click="sendData()">ยืนยัน</b-button>
+    <SendButton :paras="setParameter()"></SendButton>
     <router-link :to="{name: 'ETaxInvoiceForm'}">
       <b-button variant="danger">ยกเลิก</b-button>
     </router-link>
@@ -34,7 +34,7 @@ import DocumentRecipientConfirm from '@/components/confirm_pages/DocumentRecipie
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 import PayeeConfirm from '@/components/confirm_pages/PayeeConfirm.vue'
 import PayeeData from '@/data/Payee.data.js'
-import { AXIOS } from '@/http-common'
+import SendButton from '@/components/SendDataButton.vue'
 
 export default {
   data () {
@@ -51,19 +51,10 @@ export default {
     SellerConfirm,
     RecipientConfirm,
     DocumentRecipientConfirm,
-    PayeeConfirm
+    PayeeConfirm,
+    SendButton
   },
   methods: {
-    sendData () {
-      let paras = this.setParameter()
-      AXIOS.post('/etaxinvoice', paras)
-        .then(function (response) {
-          console.log(response)
-        })
-        .catch(function (error) {
-          console.log(error)
-        })
-    },
     setParameter () {
       let paras = new URLSearchParams()
       paras = this.input
