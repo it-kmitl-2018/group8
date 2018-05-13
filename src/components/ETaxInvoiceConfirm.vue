@@ -18,7 +18,7 @@
         </b-tab>
       </b-tabs>
     </b-card>
-    <SendButton :paras="setParameter()"></SendButton>
+    <b-button variant="success" @click="sendETaxJson()">ยืนยัน</b-button>
     <router-link :to="{name: 'ETaxInvoiceForm'}">
       <b-button variant="danger">ยกเลิก</b-button>
     </router-link>
@@ -34,7 +34,7 @@ import DocumentRecipientConfirm from '@/components/confirm_pages/DocumentRecipie
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 import PayeeConfirm from '@/components/confirm_pages/PayeeConfirm.vue'
 import PayeeData from '@/data/Payee.data.js'
-import SendButton from '@/components/SendDataButton.vue'
+import SendETax from '@/functions/SendData.js'
 
 export default {
   data () {
@@ -51,14 +51,16 @@ export default {
     SellerConfirm,
     RecipientConfirm,
     DocumentRecipientConfirm,
-    PayeeConfirm,
-    SendButton
+    PayeeConfirm
   },
   methods: {
     setParameter () {
       let paras = new URLSearchParams()
       paras = this.input
       return paras
+    },
+    sendETaxJson () {
+      SendETax('/etaxinvoice', this.setParameter())
     }
   }
 }
