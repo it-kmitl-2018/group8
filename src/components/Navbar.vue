@@ -14,6 +14,7 @@
         <b-nav-item :to="{name: 'ETaxInvoiceForm'}"> ใบกำกับภาษี </b-nav-item>
         <b-nav-item :to="{name: 'DebitCreditForm'}"> ใบเพิ่ม/ลดหนี้ </b-nav-item>
         <b-nav-item :to="{name: 'CancellationForm'}"> ใบยกเลิก </b-nav-item>
+        <b-nav-item :to="{name: 'ShortTaxForm'}"> ใบกำกับภาษีอย่างย่อ </b-nav-item>
       </b-navbar-nav>
 
     </b-collapse>

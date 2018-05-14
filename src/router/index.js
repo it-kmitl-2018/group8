@@ -10,6 +10,8 @@ import DebitCreditForm from '@/components/DebitCreditForm'
 import DebitCreditConfirm from '@/components/DebitCreditConfirm'
 import CancellationForm from '@/components/CancellationForm'
 import CancellationConfirm from '@/components/CancellationConfirm'
+import ShortTaxForm from '@/components/ShortTaxForm'
+import ShortTaxConfirm from '@/components/ShortTaxConfirm'
 
 Vue.use(Router)
 
@@ -64,6 +66,16 @@ export default new Router({
       path: '/CancellationConfirm',
       name: 'CancellationConfirm',
       component: CancellationConfirm
+    },
+    {
+      path: '/ShortTaxForm',
+      name: 'ShortTaxForm',
+      component: ShortTaxForm
+    },
+    {
+      path: '/ShortTaxConfirm',
+      name: 'ShortTaxConfirm',
+      component: ShortTaxConfirm
     }
   ]
 })
