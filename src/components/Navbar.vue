@@ -3,14 +3,15 @@
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-    <b-navbar-brand :to="{name: 'EReceiptForm'}">Project</b-navbar-brand>
+    <b-navbar-brand :to="{name: 'InvoiceForm'}">Project</b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>
         <!-- <b-nav-item :to="{name: 'app'}" exact> หน้าแรก </b-nav-item> -->
+        <b-nav-item :to="{name: 'InvoiceForm'}"> ใบแจ้งหนี้</b-nav-item>
         <b-nav-item :to="{name: 'EReceiptForm'}"> ใบเสร็จ</b-nav-item>
-        <b-nav-item :to="{name: 'ETaxInvoiceForm'}"> ใบแจ้งหนี้ </b-nav-item>
+        <b-nav-item :to="{name: 'ETaxInvoiceForm'}"> ใบกำกับภาษี </b-nav-item>
       </b-navbar-nav>
 
     </b-collapse>
