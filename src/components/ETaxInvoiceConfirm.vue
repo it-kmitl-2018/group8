@@ -5,19 +5,23 @@
     <b-card no-body>
       <b-tabs pills card vertical>
         <b-tab title="ผู้ขาย">
-          <seller-confirm :sellerConfirmProp="seller"></seller-confirm>
+          <seller-confirm :sellerConfirmProp="input.seller"></seller-confirm>
         </b-tab>
         <b-tab title="ผู้รับ">
-          <recipient-confirm :recipientConfirmProp="recipient"></recipient-confirm>
+          <recipient-confirm :recipientConfirmProp="input.recipient"></recipient-confirm>
         </b-tab>
         <b-tab title="ผู้รับเอกสาร">
-          <document-recipient-confirm :documentRecipientConfirmProp="documentRecipient"></document-recipient-confirm>
+          <document-recipient-confirm :documentRecipientConfirmProp="input.documentRecipient"></document-recipient-confirm>
         </b-tab>
         <b-tab title="ผู้รับชำระเงิน">
-          <payee-confirm :payeeConfirmProp="payee"></payee-confirm>
+          <payee-confirm :payeeConfirmProp="input.payee"></payee-confirm>
         </b-tab>
       </b-tabs>
     </b-card>
+    <b-button variant="success" @click="sendETaxJson()">ยืนยัน</b-button>
+    <router-link :to="{name: 'ETaxInvoiceForm'}">
+      <b-button variant="danger">ยกเลิก</b-button>
+    </router-link>
 
   </div>
 </template>
@@ -30,14 +34,17 @@ import DocumentRecipientConfirm from '@/components/confirm_pages/DocumentRecipie
 import DocumentRecipientData from '@/data/DocumentRecipient.data.js'
 import PayeeConfirm from '@/components/confirm_pages/PayeeConfirm.vue'
 import PayeeData from '@/data/Payee.data.js'
+import SendETax from '@/functions/SendData.js'
 
 export default {
   data () {
     return {
-      seller: SellerData.data,
-      recipient: RecipientData.data,
-      documentRecipient: DocumentRecipientData.data,
-      payee: PayeeData.data
+      input: {
+        seller: SellerData.data,
+        recipient: RecipientData.data,
+        documentRecipient: DocumentRecipientData.data,
+        payee: PayeeData.data
+      }
     }
   },
   components: {
@@ -47,6 +54,14 @@ export default {
     PayeeConfirm
   },
   methods: {
+    setParameter () {
+      let paras = new URLSearchParams()
+      paras = this.input
+      return paras
+    },
+    sendETaxJson () {
+      SendETax('/etaxinvoice', this.setParameter())
+    }
   }
 }
 </script>
