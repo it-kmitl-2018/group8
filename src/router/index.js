@@ -8,6 +8,8 @@ import InvoiceForm from '@/components/InvoiceForm'
 import InvoiceConfirm from '@/components/InvoiceConfirm'
 import DebitCreditForm from '@/components/DebitCreditForm'
 import DebitCreditConfirm from '@/components/DebitCreditConfirm'
+import CancellationForm from '@/components/CancellationForm'
+import CancellationConfirm from '@/components/CancellationConfirm'
 
 Vue.use(Router)
 
@@ -52,6 +54,16 @@ export default new Router({
       path: '/DebitCreditConfirm',
       name: 'DebitCreditConfirm',
       component: DebitCreditConfirm
+    },
+    {
+      path: '/CancellationForm',
+      name: 'CancellationForm',
+      component: CancellationForm
+    },
+    {
+      path: '/CancellationConfirm',
+      name: 'CancellationConfirm',
+      component: CancellationConfirm
     }
   ]
 })
