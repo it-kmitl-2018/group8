@@ -6,6 +6,8 @@ import EReceiptForm from '@/components/EReceiptForm'
 import EReceiptConfirm from '@/components/EReceiptConfirm'
 import InvoiceForm from '@/components/InvoiceForm'
 import InvoiceConfirm from '@/components/InvoiceConfirm'
+import DebitCreditForm from '@/components/DebitCreditForm'
+import DebitCreditConfirm from '@/components/DebitCreditConfirm'
 
 Vue.use(Router)
 
@@ -40,6 +42,16 @@ export default new Router({
       path: '/EReceiptConfirm',
       name: 'EReceiptConfirm',
       component: EReceiptConfirm
+    },
+    {
+      path: '/DebitCreditForm',
+      name: 'DebitCreditForm',
+      component: DebitCreditForm
+    },
+    {
+      path: '/DebitCreditConfirm',
+      name: 'DebitCreditConfirm',
+      component: DebitCreditConfirm
     }
   ]
 })
